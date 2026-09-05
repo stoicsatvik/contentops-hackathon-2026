@@ -2,6 +2,13 @@ name: Mobile CI
 
 on:
   pull_request:
+    paths:
+      - 'app/**'
+      - 'app.json'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig.json'
+      - 'eas.json'
   push:
     branches: [main]
     paths:
