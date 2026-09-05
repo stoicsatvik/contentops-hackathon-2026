@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ContentOps turns a transcript into ranked clips, hooks, titles, captions, SEO keywords and a publishing plan." />
+  <title>ContentOps — turn one transcript into a publishing system</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="eyebrow">CONTENTOPS / HACKATHON BUILD</div>
+      <h1>One transcript in.<br><span>An entire content queue out.</span></h1>
+      <p>ContentOps analyzes spoken-word transcripts locally in your browser, ranks the strongest moments, creates clip windows, drafts titles/captions, extracts SEO keywords, and builds a publishing plan. No upload, no API key, no fake mockup.</p>
+      <div class="hero-badges"><span>Local-first</span><span>Deterministic</span><span>Exportable JSON</span></div>
+    </header>
+
+    <section class="workspace">
+      <div class="panel input-panel">
+        <div class="panel-head"><div><p class="kicker">01 / SOURCE</p><h2>Paste a transcript</h2></div><button id="sampleBtn" class="ghost">Load sample</button></div>
+        <textarea id="transcript" spellcheck="true" placeholder="Paste a podcast, YouTube, lecture, interview, voice-note or talking-head transcript…"></textarea>
+        <div class="controls">
+          <label>Target platform
+            <select id="platform"><option>Instagram Reels</option><option>YouTube Shorts</option><option>TikTok</option><option>LinkedIn</option><option>YouTube</option></select>
+          </label>
+          <label>Clip count
+            <select id="clipCount"><option>3</option><option selected>5</option><option>7</option><option>10</option></select>
+          </label>
+          <button id="analyzeBtn" class="primary">Build content queue →</button>
+        </div>
+        <p id="sourceMeta" class="meta">Nothing analyzed yet.</p>
+      </div>
+
+      <aside class="panel score-panel">
+        <p class="kicker">02 / SIGNAL</p><h2>Source diagnostics</h2>
+        <div class="score-ring"><strong id="overallScore">—</strong><span>/100</span></div>
+        <div class="metric"><span>Hook density</span><b id="hookDensity">—</b></div>
+        <div class="metric"><span>Specificity</span><b id="specificity">—</b></div>
+        <div class="metric"><span>Clarity</span><b id="clarity">—</b></div>
+        <div class="metric"><span>Keyword focus</span><b id="focus">—</b></div>
+        <p id="diagnosis" class="diagnosis">Paste a source and run the engine. Humanity can survive another eleven seconds without a dashboard.</p>
+      </aside>
+    </section>
+
+    <section id="results" class="results hidden">
+      <div class="section-head"><div><p class="kicker">03 / OUTPUT</p><h2>Ranked clip opportunities</h2></div><div class="actions"><button id="copyBtn" class="ghost">Copy summary</button><button id="exportBtn" class="ghost">Export JSON</button></div></div>
+      <div id="clips" class="clip-grid"></div>
+
+      <div class="lower-grid">
+        <div class="panel"><p class="kicker">04 / SEO</p><h2>Keyword map</h2><div id="keywords" class="tags"></div></div>
+        <div class="panel"><p class="kicker">05 / DISTRIBUTION</p><h2>Publishing plan</h2><div id="schedule" class="schedule"></div></div>
+      </div>
+    </section>
+
+    <footer>ContentOps v0.1 · analysis runs entirely in-browser · built during the 2026 hackathon window</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
