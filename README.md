@@ -1,2 +1,11 @@
-# contentops-hackathon-2026
-Hackathon project: a working creator-workflow engine that turns transcripts into ranked clip ideas, hooks, titles, captions, SEO keywords, and a publishing plan.
+# ContentOps Hackathon 2026
+
+Bootstrapped by Cosmos Repo Factory.
+
+- Owner: `stoicsatvik`
+- Kind: `project`
+- Mobile stack: Expo SDK 57 + React Native + Expo Router
+- CI: seeded directly by Cosmos Repo Factory
+- EAS: `EXPO_TOKEN` is injected automatically; the first cloud build runs `eas init --force --non-interactive` before starting the build
+
+Factory slug: `contentops-hackathon-2026`
